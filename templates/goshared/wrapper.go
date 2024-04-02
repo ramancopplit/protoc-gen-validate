@@ -6,7 +6,7 @@ const wrapperTpl = `
 	if wrapper := {{ accessor . }}; wrapper != nil {
 		{{ render (unwrap . "wrapper") }}
 	} {{ if .MessageRules.GetRequired }} else {
-		err := {{ err . "value is required and must not be nil." }}
+		err := {{ errIdxWithCode . $r.GetErrorCode  "value is required and must not be nil." }}
 		if !all { return err }
 		errors = append(errors, err)
 	} {{ end }}

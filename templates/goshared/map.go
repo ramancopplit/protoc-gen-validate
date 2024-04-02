@@ -10,26 +10,26 @@ const mapTpl = `
 	{{ if $r.GetMinPairs }}
 		{{ if eq $r.GetMinPairs $r.GetMaxPairs }}
 			if len({{ accessor . }}) != {{ $r.GetMinPairs }} {
-				err := {{ err . "value must contain exactly " $r.GetMinPairs " pair(s)" }}
+				err := {{ errWithCode . $r.GetErrorCode  "value must contain exactly " $r.GetMinPairs " pair(s)" }}
 				if !all { return err }
 				errors = append(errors, err)
 			}
 		{{ else if $r.MaxPairs }}
 			if l := len({{ accessor . }}); l < {{ $r.GetMinPairs }} || l > {{ $r.GetMaxPairs }} {
-				err := {{ err . "value must contain between " $r.GetMinPairs " and " $r.GetMaxPairs " pairs, inclusive" }}
+				err := {{ errWithCode . $r.GetErrorCode  "value must contain between " $r.GetMinPairs " and " $r.GetMaxPairs " pairs, inclusive" }}
 				if !all { return err }
 				errors = append(errors, err)
 			}
 		{{ else }}
 			if len({{ accessor . }}) < {{ $r.GetMinPairs }} {
-				err := {{ err . "value must contain at least " $r.GetMinPairs " pair(s)" }}
+				err := {{ errWithCode . $r.GetErrorCode  "value must contain at least " $r.GetMinPairs " pair(s)" }}
 				if !all { return err }
 				errors = append(errors, err)
 			}
 		{{ end }}
 	{{ else if $r.MaxPairs }}
 		if len({{ accessor . }}) > {{ $r.GetMaxPairs }} {
-			err := {{ err . "value must contain no more than " $r.GetMaxPairs " pair(s)" }}
+			err := {{ errWithCode . $r.GetErrorCode  "value must contain no more than " $r.GetMaxPairs " pair(s)" }}
 			if !all { return err }
 			errors = append(errors, err)
 		}
