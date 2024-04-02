@@ -26,7 +26,7 @@ const strTpl = `
 	{{ else if $r.MinLen }}
 		{{ if $r.MaxLen }}
 			if l := utf8.RuneCountInString({{ accessor . }}); l < {{ $r.GetMinLen }} || l > {{ $r.GetMaxLen }} {
-				err := {{ errWithCode . $r.GetErrorCode "value length must be between " $r.GetMinLen " and " $r.GetMaxLen " runes, inclusive" }}
+				err := {{ errWithCode . "$r.GetErrorCode" "value length must be between " $r.GetMinLen " and " $r.GetMaxLen " runes, inclusive" }}
 				if !all { return err }
 				errors = append(errors, err)
 			}
@@ -62,7 +62,7 @@ const strTpl = `
 	{{ else if $r.MinBytes }}
 		{{ if $r.MaxBytes }}
 			if l := len({{ accessor . }}); l < {{ $r.GetMinBytes }} || l > {{ $r.GetMaxBytes }} {
-					err := {{ errWithCode . $r.GetErrorCode "value length must be between " $r.GetMinBytes " and " $r.GetMaxBytes " bytes, inclusive" }}
+					err := {{ errWithCode . "$r.GetErrorCode" "value length must be between " $r.GetMinBytes " and " $r.GetMaxBytes " bytes, inclusive" }}
 					if !all { return err }
 					errors = append(errors, err)
 			}
