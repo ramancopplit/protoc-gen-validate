@@ -505,6 +505,9 @@ message BoolRules {
 
 // StringRules describe the constraints applied to `string` values
 message StringRules {
+    // ErrorCode specifies that this field must be exactly the specified value
+    optional int32 error_code = 30;
+
     // Const specifies that this field must be exactly the specified value
     optional string const = 1;
 
