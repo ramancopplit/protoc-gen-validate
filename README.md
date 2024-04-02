@@ -91,10 +91,10 @@ Download assets from [GitHub Releases](https://github.com/bufbuild/protoc-gen-va
 
 ```sh
 # fetches this repo into $GOPATH
-go get -d github.com/envoyproxy/protoc-gen-validate
+go get -d github.com/xiaozhuhellowold/protoc-gen-validate
 ```
 
-> #### 💡 Yes, our go module path is `github.com/envoyproxy/protoc-gen-validate` **not** `bufbuild` this is intentional.
+> #### 💡 Yes, our go module path is `github.com/xiaozhuhellowold/protoc-gen-validate` **not** `bufbuild` this is intentional.
 > Changing the module path is effectively creating a new, independent module. We
 > would prefer not to break our users. The Go team are working on
 > better `cmd/go`
@@ -172,7 +172,7 @@ plugins:
 
 version: v1
 deps:
-  - buf.build/envoyproxy/protoc-gen-validate
+  - buf.build/xiaozhuhellowold/protoc-gen-validate
 ```
 
 #### Java

@@ -1,4 +1,4 @@
-module github.com/envoyproxy/protoc-gen-validate/tests
+module github.com/xiaozhuhellowold/protoc-gen-validate/tests
 
 go 1.21.1
 
@@ -9,4 +9,4 @@ require (
 
 require golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 
-replace github.com/envoyproxy/protoc-gen-validate => ../
+replace github.com/xiaozhuhellowold/protoc-gen-validate => ../

@@ -7,8 +7,8 @@ import (
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 
-	"github.com/envoyproxy/protoc-gen-validate/templates"
-	"github.com/envoyproxy/protoc-gen-validate/templates/java"
+	"github.com/xiaozhuhellowold/protoc-gen-validate/templates"
+	"github.com/xiaozhuhellowold/protoc-gen-validate/templates/java"
 )
 
 const (

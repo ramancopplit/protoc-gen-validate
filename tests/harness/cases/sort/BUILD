@@ -21,7 +21,7 @@ proto_library(
 
 pgv_go_proto_library(
     name = "go",
-    importpath = "github.com/envoyproxy/protoc-gen-validate/tests/harness/cases/sort/go",
+    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/cases/sort/go",
     proto = ":sort_proto",
     deps = [
         "@org_golang_google_protobuf//types/known/anypb:go_default_library",
@@ -43,7 +43,7 @@ proto_library(
 
 go_proto_library(
     name = "sort_sort_go_proto",
-    importpath = "github.com/envoyproxy/protoc-gen-validate/tests/harness/cases/sort",
+    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/cases/sort",
     proto = ":sort_proto",
     visibility = ["//visibility:public"],
     deps = ["//validate:go_default_library"],
@@ -52,7 +52,7 @@ go_proto_library(
 go_library(
     name = "go_default_library",
     embed = [":sort_sort_go_proto"],
-    importpath = "github.com/envoyproxy/protoc-gen-validate/tests/harness/cases/sort",
+    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/cases/sort",
     visibility = ["//visibility:public"],
 )
 
