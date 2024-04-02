@@ -59,7 +59,7 @@ const strTpl = `
 				}
 			{{ else }}
 				if (length < {{ $r.GetMinBytes }} || length > {{ $r.GetMaxBytes }}) {
-					{{ errWithCode . $r.GetMaxBytes "value length must be between " $r.GetMinBytes " and " $r.GetMaxBytes " bytes, inclusive" }}
+					{{ err . "value length must be between " $r.GetMinBytes " and " $r.GetMaxBytes " bytes, inclusive" }}
 				}
 			{{ end }}
 		{{ else }}
