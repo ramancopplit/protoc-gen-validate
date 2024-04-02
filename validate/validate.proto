@@ -1,7 +1,7 @@
 syntax = "proto2";
 package validate;
 
-option go_package = "github.com/xiaozhuhellowold/protoc-gen-validate/validate";
+option go_package = "github.com/ramancopplit/protoc-gen-validate/validate";
 option java_package = "io.envoyproxy.pgv.validate";
 
 import "google/protobuf/descriptor.proto";
@@ -505,8 +505,6 @@ message BoolRules {
 
 // StringRules describe the constraints applied to `string` values
 message StringRules {
-    // ErrorCode specifies that this field must be exactly the specified value
-    optional int32 error_code = 30;
 
     // Const specifies that this field must be exactly the specified value
     optional string const = 1;
@@ -620,6 +618,9 @@ message StringRules {
   // IgnoreEmpty specifies that the validation rules of this field should be
   // evaluated only if the field is not empty
   optional bool ignore_empty = 26;
+
+  // ErrorCode specifies that the error_code if this field does not comply with the validation rules.
+  optional int32 error_code = 27;
 }
 
 // WellKnownRegex contain some well-known patterns.

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	harness "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/go"
+	harness "github.com/ramancopplit/protoc-gen-validate/tests/harness/go"
 	"golang.org/x/net/context"
 	"google.golang.org/protobuf/proto"
 )

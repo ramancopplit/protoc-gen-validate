@@ -11,7 +11,7 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/xiaozhuhellowold/protoc-gen-validate/validate"
+	"github.com/ramancopplit/protoc-gen-validate/validate"
 )
 
 var (

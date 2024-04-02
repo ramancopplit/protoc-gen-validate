@@ -13,7 +13,7 @@ go_library(
         "harness.go",
         "worker.go",
     ],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/executor",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/tests/harness/executor",
     visibility = ["//visibility:private"],
     deps = [
         "//tests/harness:harness_go_proto",
@@ -43,7 +43,7 @@ go_binary(
         ],
     }),
     embed = [":go_default_library"],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/executor",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/tests/harness/executor",
     visibility = ["//visibility:private"],
 )
 

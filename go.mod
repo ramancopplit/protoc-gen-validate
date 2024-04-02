@@ -1,4 +1,4 @@
-module github.com/xiaozhuhellowold/protoc-gen-validate
+module github.com/ramancopplit/protoc-gen-validate
 
 go 1.19
 

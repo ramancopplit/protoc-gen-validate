@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 go_library(
     name = "go_default_library",
     srcs = ["harness.go"],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/go/main",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/tests/harness/go/main",
     visibility = ["//visibility:private"],
     deps = [
         "//tests/harness:harness_go_proto",
@@ -37,6 +37,6 @@ genrule(
 go_binary(
     name = "main",
     embed = [":go_default_library"],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/tests/harness/go/main",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/tests/harness/go/main",
     visibility = ["//visibility:public"],
 )

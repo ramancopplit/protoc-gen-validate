@@ -22,7 +22,7 @@ go_library(
         "timestamp.go",
         "wrapper.go",
     ],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/templates/java",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/templates/java",
     visibility = ["//visibility:public"],
     deps = [
         "//templates/shared",

@@ -6,7 +6,7 @@ go_library(
         "checker.go",
         "validate.go",
     ],
-    importpath = "github.com/xiaozhuhellowold/protoc-gen-validate/module",
+    importpath = "github.com/ramancopplit/protoc-gen-validate/module",
     visibility = ["//visibility:public"],
     deps = [
         "//templates",
